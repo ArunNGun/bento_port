@@ -86,3 +86,13 @@
     font-size: 40px;
   }
 }
+@media (max-width: 450px) {
+  .cardText{
+    line-height: 56px;
+    font-size: 42px;
+  }
+  .myIntro{
+      line-height: 42px;
+      font-size: 36px;
+  }
+}
