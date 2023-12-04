@@ -9,6 +9,7 @@
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
+  overflow-x: hidden;
 }
 .dot{
   color: var(--accent-color);
