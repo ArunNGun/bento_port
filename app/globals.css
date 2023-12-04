@@ -9,6 +9,7 @@
 }
 body{
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
