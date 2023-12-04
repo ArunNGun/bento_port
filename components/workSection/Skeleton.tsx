@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './work.module.css'
 const Skeleton = () => {
   return (
-  <div className={styles.main}>
+  <div id='works' className={styles.main}>
   <div className={styles.largeProjectMain}>
     <div className={styles.largeProjectContent}>
       <div className={styles.largeProjectCardTitleContainer}>

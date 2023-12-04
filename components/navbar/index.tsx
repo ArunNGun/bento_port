@@ -1,10 +1,16 @@
+"use client"
+//@ts-ignore
+
 import React from 'react'
 import styles from './navbar.module.css'
 import Logo from '@/app/Logo';
 import DownloadIcon from './DownloadIcon';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const NavBar = () => {
+  const router = useRouter()
+  
   return (
     <motion.div
     // motion
@@ -18,10 +24,10 @@ const NavBar = () => {
     className={styles.main}>
       <motion.div className={styles.logo}><Logo /></motion.div>
       <ul className={styles.navItemContainer}>
-        <li className={styles.navItems}>home.</li>
-        <li className={styles.navItems}>about.</li>
-        <li className={styles.navItems}>works.</li>
-        <li className={styles.navItems}>contact.</li>
+        <li className={styles.navItems} onClick={() => router.push("/#home")}>home.</li>
+        <li className={styles.navItems} onClick={() => router.push("/#about")}>about.</li>
+        <li className={styles.navItems} onClick={() => router.push("/#works")}>works.</li>
+        <li className={styles.navItems} onClick={() => router.push("/#contact")}>contact.</li>
         <a className={styles.navItems} download href="/Arun_Kumar.pdf">
           resume
           <DownloadIcon />

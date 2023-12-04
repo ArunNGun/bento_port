@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
   return ( 
     <motion.div
+    id='about'
     // motion
     initial={{ opacity: 0.1, y: 100 }}
  whileInView={{ opacity: 1, y:0 }}

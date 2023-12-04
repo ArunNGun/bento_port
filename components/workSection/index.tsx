@@ -25,7 +25,9 @@ const WorkSection = () => {
   if(isLoading || !projectData) return <Skeleton/>;
   return (
     <>
-    <div className={styles.main}>
+    <div
+    id='works'
+    className={styles.main}>
       {
         projectData?.map((project:any)=>(
           project.id<3 ?

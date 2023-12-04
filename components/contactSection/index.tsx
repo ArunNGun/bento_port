@@ -5,7 +5,7 @@ const ContactSection = () => {
   
   return (
     <motion.div
-    
+    id='contact'
     className={styles.main}>
       <motion.div
       // motion

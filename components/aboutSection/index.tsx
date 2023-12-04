@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const AboutSection = () => {
   return (
     <motion.div
+    id='about'
     // motion
     initial={{ opacity: 0, y: 10 }}
  whileInView={{ opacity: 1, y:0 }}
