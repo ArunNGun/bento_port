@@ -199,3 +199,37 @@
     transform: rotate(360deg)
   }
 }
+
+@media (max-width: 852px) {
+  .smallProjectContainer{
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .smallProjectImage{
+    height: 400px;
+  }
+  .largeProjectImage{
+    height: 400px;
+  }
+  .largeProjectCardTitle{
+    font-size: 24px;
+  }
+  .smallProjectCardTitle{
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .largeProjectCardIntroText{
+    display: none;
+  }
+  .largeProjectCardIntro{
+    justify-content: flex-end;
+  }
+  .largeProjectSubTitle{
+    font-size: 17px;
+  }
+  .smallProjectContent{
+    grid-template-columns: 1fr 0.5fr;
+  }
+}

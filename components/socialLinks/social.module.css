@@ -30,3 +30,9 @@
 .socialLinks:hover{
  background-color: var(--sec-bg-color-hover);
 }
+
+@media (max-width: 600px) {
+.main{
+  flex-wrap: wrap;
+}
+}

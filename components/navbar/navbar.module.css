@@ -53,3 +53,9 @@
 .dot{
   color: var(--accent-color);
 }
+
+@media (max-width: 698px) {
+  .navItems{
+    display: none;
+  }
+}

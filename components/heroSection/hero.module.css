@@ -79,3 +79,25 @@
 .emailButton:hover{
   background-color: var(--accent-color-hover);
 }
+
+@media (max-width: 944px) {
+  .heroSection{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 8px;
+  }
+  .heroLeft{
+    max-width: 100%;
+    
+  }
+  
+}
+@media (max-width: 600px) {
+  .quickIntro{
+    font-size: 48px;
+  }
+  .cardText{
+    font-size: 46px;
+  }
+}
