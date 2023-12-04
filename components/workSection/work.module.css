@@ -1,0 +1,201 @@
+.main{
+  display: flex;
+  gap: 8px;
+  /* margin: 8px 0px; */
+  width: 100%;
+  flex-direction: column;
+}
+.largeProjectMain{
+  width: 100%;
+  background-color: var(--sec-bg-color);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.largeProjectMain img{
+  transition: ease-in-out 0.3s;
+}
+.largeProjectMain:hover img{
+    scale: 1.05;
+}
+.smallProjectMain img{
+  transition: ease-in-out 0.3s;
+}
+.smallProjectMain:hover img{
+    scale: 1.01;
+}
+.largeProjectCardTitle{
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+}
+.largeProjectSubTitle{
+  color: var(--sec-text-color);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.largeProjectContent{
+  display: grid;
+  padding: 40px;
+  align-items: center;
+  grid-template-columns: 0.7fr 1fr;
+  width: 100%;
+  gap: 8px;
+}
+.largeProjectCardIntro{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.largeProjectCardIntroText{
+  max-width: 482px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.largeProjectCardLink{
+  background-color: #ffff;
+  padding: 16px;
+  display: flex;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.linkArrowPath{
+  fill:#000;
+}
+.largeProjectImage{
+  height: 626px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* small project */
+
+.smallProjectContainer{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.smallProjectContent{
+  display: flex;
+    padding:40px;
+    align-items: center;
+    justify-content: space-between;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+.smallProjectCardIntro{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ffff;
+  padding: 16px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.smallProjectCardLink{
+  display: flex;
+  align-items: center;
+}
+
+.smallProjectImage{
+  height: 526px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.viewMore:hover{
+  border-color: var(--accent-color);
+}
+.viewMore{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 4px;
+  border-radius: 99px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 4px 0px 4px 24px;
+  color: var(--sec-text-color);
+  border: 2px solid #272727;
+  box-shadow: -5px -5px 5px rgba(92, 92, 92, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 5px rgba(82, 82, 82, 0.2), inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+  transition: border-color 800ms ease-out;
+}
+.moreProjects{
+  background-color: var(--sec-bg-color);
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  /* padding: 1rem; */
+  border-radius: 24px;
+  justify-content: flex-end;
+  /* margin: 16px 5% 40px; */
+  align-items: center;
+  margin-top: 8px;
+}
+.viewMoreText{
+  color: var(--sec-text-color);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+.viewMoreLink{
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  margin-left: 8px;
+  display: flex;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.largeProjectImageSkeleton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 626px;
+}
+.container {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+  position: relative;
+}
+.loader {
+  
+}
+
+.loader:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: var(--sec-bg-color);
+  border-bottom: 0 solid #00000082;
+  box-shadow: 0 -10px 20px 20px #00000040 inset, 0 -5px 15px 10px #00000050 inset, 0 -2px 5px #00000080 inset, 0 -3px 2px #000000bb inset, 0 2px 0px #000000, 0 2px 3px #000000, 0 5px 5px #00000090, 0 10px 15px #00000060, 0 10px 20px 20px #9085853d;
+  filter: blur(3px);
+  animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}

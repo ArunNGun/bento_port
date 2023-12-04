@@ -1,0 +1,81 @@
+.heroSection{
+  display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    width: 100%;
+    gap: 8px;
+}
+.heroLeft{
+  display: flex;
+  width: 100%;
+  max-width: 746px;
+  padding: 40px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  border-radius: 24px;
+  background-color: var(--sec-bg-color);
+}
+.heroright{
+  display: flex;
+  padding: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  border-radius: 24px;
+  background-color: var(--sec-bg-color);
+  text-align: center;
+}
+.myImage{
+  overflow: hidden;
+  width: 108px;
+  height: 108px;
+  flex: 0 0 auto;
+  border-radius: 100%;
+}
+.quickIntro{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.secIntro{
+ color: var(--sec-text-color);
+}
+.cardContent{
+  display: flex;
+    margin-bottom: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+}
+.cardText{
+  margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+.emailButton{
+  padding: 24px 32px;
+  border-radius: 99px;
+  background-color: var(--accent-color);
+  transition: background-color 300ms ease-out;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.emailButton:hover{
+  background-color: var(--accent-color-hover);
+}

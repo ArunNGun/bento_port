@@ -1,0 +1,56 @@
+.main{
+  display: flex;
+  width: 100%;
+  padding: 48px;
+  background-color: var(--sec-bg-color);
+  border-radius: 24px;
+  margin: 8px 0px;
+  position: relative;
+  border: 2px solid #272727;
+  box-shadow: -5px -5px 5px rgba(92, 92, 92, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4), 
+    inset -5px -5px 5px rgba(82, 82, 82, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.skillContainer{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+.skillContainer::-webkit-scrollbar {
+  width: 2px;
+}
+
+.skillContainer::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 99px;
+}
+
+.skillCard{
+  padding: 10px;
+  background: rgb(255 255 255 / 0%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: inset 1px 1px 0.12px rgb(255 255 255 / 26%), 1px 1px 3px rgb(255 255 255 / 10%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.skillHeading1{
+  color: var(--accent-color);
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+}
+.skillHeading2{
+  color: var(--accent-color);
+  position: absolute;
+ bottom: 0;
+ right: 48px;
+ font-size: 60px;
+}

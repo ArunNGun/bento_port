@@ -1,0 +1,31 @@
+.main{
+  background-color: var(--sec-bg-color);
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 24px;
+  justify-content: space-between;
+  margin: 16px 5% 40px;
+  align-items: center;
+}
+.fotterTitle{
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+.fotterYear{
+  color: var(--sec-text-color);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+.heartIconPath{
+  fill: var(--accent-color);
+}
+.heartSvg{
+  margin: 0px 4px;
+}
