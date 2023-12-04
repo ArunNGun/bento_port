@@ -20,8 +20,6 @@ const WorkSection = () => {
     }
     fetchProject()
   },[])
-
-  // return <Skeleton />
   if(isLoading || !projectData) return <Skeleton/>;
   return (
     <>
