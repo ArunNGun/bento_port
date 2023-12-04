@@ -15,11 +15,15 @@
   list-style-type: none;
   align-items: center;
 }
+.navItems:hover{
+  color: #ffff;
+}
 .navItems{
   padding: 0 24px;
   font-size: 17px;
   font-weight: 500;
   color: var(--sec-text-color);
+  cursor: pointer;
 }
 .navItems:nth-child(1){
   padding: 0 24px;
