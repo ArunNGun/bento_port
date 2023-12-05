@@ -21,7 +21,7 @@
   border-radius: 99px;
   background-color: var(--sec-bg-color);
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 18px;
   line-height: 24px;
   text-align: center;

@@ -6,11 +6,11 @@
   border-radius: 24px;
   margin: 8px 0px;
   position: relative;
-  border: 2px solid #272727;
-  box-shadow: -5px -5px 5px rgba(92, 92, 92, 0.1),
-    10px 10px 10px rgba(0, 0, 0, 0.4), 
-    inset -5px -5px 5px rgba(82, 82, 82, 0.2),
-    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--border-color);
+  box-shadow: -5px -5px 5px var(--box-shadow-color-1),
+    10px 10px 10px var(--box-shadow-color-2), 
+    inset -5px -5px 5px var(--box-shadow-color-3),
+    inset 10px 10px 10px var(--box-shadow-color-4);
 }
 
 .skillContainer{

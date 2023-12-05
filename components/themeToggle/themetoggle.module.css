@@ -1,0 +1,89 @@
+
+.toggleContainer:hover{
+  box-shadow: -5px -5px 15px #242323, 5px 5px 15rgb(15, 15, 15)222, inset 5px 5px 10px #0b0b0b, inset -5px -5px 10rgb(26, 25, 25)444;
+  color: #000000;
+  transition: 500ms;
+}
+.toggleContainer{
+  padding: 0 24px;
+  margin-right: 8px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 4px;
+  border-radius: 99px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 8px 24px;
+  color: var(--sec-text-color);
+  border: 2px solid var(--border-color);
+  box-shadow: -5px -5px 5px var(--box-shadow-color-1), 10px 10px 10px var(--box-shadow-color-2), inset -5px -5px 5px var(--box-shadow-color-3), inset 10px 10px 10px var(--box-shadow-color-4);
+  transition: border-color 800ms ease-out;
+}
+.toggle {
+  --size: 1rem;
+  
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  
+  transition: all 500ms;
+}
+
+.toggle:checked {
+  --ray-size: calc(var(--size) * -0.4);
+  --offset-orthogonal: calc(var(--size) * 0.65);
+  --offset-diagonal: calc(var(--size) * 0.45);
+
+  transform: scale(0.75);
+  color: hsl(38, 36%, 62%);
+  box-shadow: 
+    inset 0 0 0 var(--size),
+    calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+    var(--offset-orthogonal) 0 0 var(--ray-size),
+    0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+    0 var(--offset-orthogonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+    var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+    var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+.background {
+  --bg: hsl(240, 21%, 47%);
+  background: var(--bg);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: background 500ms;
+}
+
+.toggle {
+  z-index: 1;
+}
+
+.toggle:checked ~ .background {
+  --bg: white;
+}
+
+.toggle:checked ~ .title {
+  --color: hsl(40, 100%, 50%);
+}
+
+.title {
+  --color: hsl(240, 100%, 95%);
+  color: var(--color);
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem 0 0;
+  transition: color 500ms;
+}
