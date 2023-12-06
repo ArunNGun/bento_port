@@ -15,6 +15,10 @@
 .largeProjectMain img{
   transition: ease-in-out 0.3s;
 }
+
+.largeProjectMain:hover .linkArrowPath{
+   fill: var(--accent-color);
+}
 .largeProjectMain:hover img{
     scale: 1.05;
 }
@@ -62,6 +66,7 @@
   display: flex;
   border-radius: 50%;
   text-decoration: none;
+  transition: ease-in-out 0.5s;
 }
 .linkArrowPath{
   fill:#000;
