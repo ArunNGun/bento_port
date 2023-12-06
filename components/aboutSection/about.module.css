@@ -56,7 +56,16 @@
   font-weight: 500;
   letter-spacing: -0.03em;
 }
-
+.cardIcon{
+  width: 112px;
+  height: 112px;
+}
+.innerPath{
+  stroke:var(--accent-color)
+}
+.outerPath{
+  stroke:var(--text-color)
+}
 @media (max-width: 976px) {
   .aboutSection{
     margin-top: 8px;

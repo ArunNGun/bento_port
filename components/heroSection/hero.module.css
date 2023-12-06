@@ -63,6 +63,14 @@
     font-weight: 500;
     letter-spacing: -0.03em;
 }
+.emailSvg path{
+  stroke: var(--text-color);
+  fill: none;
+}
+.emailSvg circle{
+  stroke: var(--accent-color);
+  fill: none;
+}
 .emailButton{
   padding: 24px 32px;
   border-radius: 99px;

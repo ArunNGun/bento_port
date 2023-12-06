@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './hero.module.css'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Email from './Email';
 
 const HeroSection = () => {
   return ( 
@@ -52,13 +53,7 @@ const HeroSection = () => {
       className={styles.heroright}>
         <div className={styles.cardContent}>
           <div className={styles.cardIcon}>
-          <Image
-      priority
-      width={112}
-      height={112}
-      src='/card.svg'
-      alt="card icon"
-    />
+          <Email/>
           </div>
           <h2 className={styles.cardText}>
           Have a project <br/>

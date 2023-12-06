@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './about.module.css'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Location from './Location';
 
 const AboutSection = () => {
   return (
@@ -25,13 +26,7 @@ const AboutSection = () => {
       className={styles.aboutLeft}>
         <div className={styles.cardContent}>
           <div className={styles.cardIcon}>
-            <Image
-              priority
-              width={112}
-              height={112}
-              src='/loc.svg'
-              alt="loc icon"
-              />
+            <Location/>
           </div>
           <h2 className={styles.cardText}>
             Based in <br />
