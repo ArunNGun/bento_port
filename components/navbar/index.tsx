@@ -5,7 +5,7 @@ import React from 'react'
 import styles from './navbar.module.css'
 import Logo from '@/app/Logo';
 import DownloadIcon from './DownloadIcon';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion, stagger } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import ThemeToggle from '../themeToggle';
 
@@ -22,17 +22,36 @@ const NavBar = () => {
       //motion
       className={styles.main}>
       <motion.div className={styles.logo}><Logo /></motion.div>
-      <ul className={styles.navItemContainer}>
-        <li className={styles.navItems} onClick={() => router.push("/#home")}>home.</li>
-        <li className={styles.navItems} onClick={() => router.push("/#about")}>about.</li>
-        <li className={styles.navItems} onClick={() => router.push("/#works")}>works.</li>
-        <li className={styles.navItems} onClick={() => router.push("/#contact")}>contact.</li>
+      <AnimatePresence>
+      <motion.ul 
+      className={styles.navItemContainer}>
+        <motion.li
+        initial={{opacity: 0, y:-10}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1, ease:'easeIn'}}
+        className={styles.navItems} onClick={() => router.push("/#home")}>home.</motion.li>
+        <motion.li
+        initial={{opacity: 0, y:10}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1, ease:'easeIn', delay:0.3}}
+        className={styles.navItems} onClick={() => router.push("/#about")}>about.</motion.li>
+        <motion.li 
+        initial={{opacity: 0, y:-10}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1, ease:'easeIn', delay: 0.5}}
+        className={styles.navItems} onClick={() => router.push("/#works")}>works.</motion.li>
+        <motion.li 
+        initial={{opacity: 0, y:10}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1, ease:'easeIn',  delay: 0.7}}
+        className={styles.navItems} onClick={() => router.push("/#contact")}>contact.</motion.li>
         <ThemeToggle />
         <a className={styles.navItems} download href="/Arun_Kumar.pdf">
           resume
           <DownloadIcon />
         </a>
-      </ul>
+      </motion.ul>
+      </AnimatePresence>
     </motion.div>
   );
 }

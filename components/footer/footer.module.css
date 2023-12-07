@@ -25,7 +25,19 @@
 
 .heartIconPath{
   fill: var(--accent-color);
+  animation: heartbeat 2s infinite ease-in-out;
 }
 .heartSvg{
   margin: 0px 4px;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

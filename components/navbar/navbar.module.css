@@ -58,8 +58,9 @@
   color: var(--accent-color);
 }
 
-@media (max-width: 698px) {
+@media (max-width: 773px) {
   .navItems{
+    transition: ease-out 1s;
     display: none;
   }
 }

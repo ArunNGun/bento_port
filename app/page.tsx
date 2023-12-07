@@ -11,6 +11,15 @@ import ContactSection from '@/components/contactSection'
 
 export default function Home() {
   return (
-    <main className={styles.main}><NavBar/><HeroSection/><SocialLinks/><AboutSection/><SkillSection/><WorkSection/><ContactSection/><Footer/></main>
+    <main className={styles.main}>
+      <NavBar />
+      <HeroSection/>
+      <SocialLinks/>
+      <AboutSection/>
+      <SkillSection/>
+      <WorkSection/>
+      <ContactSection/>
+      <Footer/>
+      </main>
   )
 }

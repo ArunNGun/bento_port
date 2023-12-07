@@ -6,8 +6,9 @@ import SmallProjectCard from './SmallProjectCard';
 import LinkArrow from './LinkArrow';
 import Skeleton from './Skeleton';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const WorkSection = () => {
+const WorkSection = ({instance="home"}) => {
   const [projectData, setprojectData] = useState<any>(null)  
   const [isLoading, setIsLoading] = useState<any>(false)  
   useEffect(()=>{
@@ -45,8 +46,10 @@ const WorkSection = () => {
      whileInView={{ width:"100%" }}
      viewport={{ once: true, amount: 0.1 }}
        transition={{ease: "linear", duration: 1   }}
-     className={styles.moreProjects}>
-     <motion.div
+     className={styles.moreProjects}
+     >
+     
+     {instance === "home" ? <motion.div
      // motion
   // initial={{ opacity: 0, borderColor:"var(--accent-color)" }}
   // whileInView={{ opacity: 1, borderColor:"#272727" }}
@@ -55,13 +58,33 @@ const WorkSection = () => {
  
   //motion
      className={styles.viewMore}>
-       <div className={styles.viewMoreText}>
+      <motion.div
+      initial={{ opacity:0 }}
+      whileInView={{ opacity:1 }}
+      viewport={{ once: true, amount: 0.1 }}
+        transition={{ease: "linear", duration: 1, delay:1   }}
+      >
+       <Link href={'/projects'} className={styles.viewMoreText}>
          view more.
-       </div>
+       </Link>
+       </motion.div>
        <a href='#' className={styles.viewMoreLink}>
          <LinkArrow />
        </a>
      </motion.div>
+     :
+     <div
+    id='works'
+    className={styles.main}>
+      {
+      projectData?.map((project:any)=>(
+        project.id>4 ?
+        <LargeProjectCard key={project.id} projectLink={project.projectLink} title={project.title} imageSrc={project.imageSrc} quickintro={project.quickIntro} intro={project.intro} />
+        :null
+      ))
+}
+      </div>
+}
    </motion.div>
     </>
   );

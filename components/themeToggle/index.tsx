@@ -1,11 +1,28 @@
 "use Client"
 //@ts-nocheck
-import Image from 'next/image';
 import styles from './themetoggle.module.css';
 import { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 const ThemeToggle = () => {
   const [dark, setDark] = useState<boolean>(true)
+  const buttonControls = useAnimation();
+
+  const buttonVariants = {
+    normal: {border: '2px solid var(--border-color)' },
+    glow: { border: '2px solid var(--accent-color)' },
+  };
+
+  useEffect(() => {
+    buttonControls.start('glow');
+    const timeoutId = setTimeout(() => {
+      buttonControls.start('normal');
+    }, 1500);
+
+    return () => clearTimeout(timeoutId);
+  }, [buttonControls]);
+
+
   // useEffect(() => {
   //   const savedTheme = window.localStorage.getItem("theme");
   //   savedTheme && setDark(savedTheme === 'dark');
@@ -18,13 +35,17 @@ const ThemeToggle = () => {
   }, [dark])
   
 
-  return (
-    <div onClick={() => setDark(!dark)} className={styles.toggleContainer}>
-      {/* <div className={styles.circle}> */}
-        {/* <p onClick={() => setDark(!dark)}>{dark ? 'light' : 'dark'}</p> */}
-        <input id="toggle" className={styles.toggle} checked={!dark} type="checkbox" />
-      {/* </div> */}
-    </div>
+  return (<motion.div
+    variants={buttonVariants}
+    initial={{border: '2px solid transparent'}}
+    animate={buttonControls}
+    transition={{duration:2, ease:'easeIn', delay: 0.9}}
+    // initial={{ border: '2px solid transparent' }}
+    // animate={{ border: '2px solid var(--border-color)' }}
+    // 
+    onClick={() => setDark(!dark)} className={styles.toggleContainer}>
+    <input id="toggle" className={styles.toggle} checked={!dark} type="checkbox" />
+    </motion.div>
   );
 };
 
