@@ -3,9 +3,11 @@
 import styles from './themetoggle.module.css';
 import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import useStore from '@/app/store';
 
 const ThemeToggle = () => {
-  const [dark, setDark] = useState<boolean>(true)
+  // const [dark, setDark] = useState<boolean>(true)
+  const { isDarkTheme, toggleTheme }:any = useStore();
   const buttonControls = useAnimation();
 
   const buttonVariants = {
@@ -29,10 +31,10 @@ const ThemeToggle = () => {
   // }, []);
 
   useEffect(() => {
-    const theme = dark ? 'dark' : 'light'
+    const theme = isDarkTheme ? 'dark' : 'light'
     document.documentElement.setAttribute('data-theme', theme);
     window.localStorage.setItem("theme", theme);
-  }, [dark])
+  }, [isDarkTheme])
   
 
   return (<motion.div
@@ -43,8 +45,9 @@ const ThemeToggle = () => {
     // initial={{ border: '2px solid transparent' }}
     // animate={{ border: '2px solid var(--border-color)' }}
     // 
-    onClick={() => setDark(!dark)} className={styles.toggleContainer}>
-    <input id="toggle" className={styles.toggle} checked={!dark} type="checkbox" />
+    onClick={toggleTheme}
+    className={styles.toggleContainer}>
+    <input id="toggle" className={styles.toggle} checked={!isDarkTheme} type="checkbox" />
     </motion.div>
   );
 };

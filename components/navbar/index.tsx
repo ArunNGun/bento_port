@@ -8,6 +8,7 @@ import DownloadIcon from './DownloadIcon';
 import { AnimatePresence, motion, stagger } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import ThemeToggle from '../themeToggle';
+import Link from 'next/link';
 
 const NavBar = () => {
   const router = useRouter()
@@ -34,17 +35,23 @@ const NavBar = () => {
         initial={{opacity: 0, y:10}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, ease:'easeIn', delay:0.3}}
-        className={styles.navItems} onClick={() => router.push("/#about")}>about.</motion.li>
+        className={styles.navItems} 
+        onClick={() => router.push("/#about")}>about.</motion.li>
         <motion.li 
         initial={{opacity: 0, y:-10}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, ease:'easeIn', delay: 0.5}}
-        className={styles.navItems} onClick={() => router.push("/#works")}>works.</motion.li>
-        <motion.li 
+        className={styles.navItems}>
+             <Link className={styles.workLink} href={'/projects'}>
+          works.
+            </Link>
+        </motion.li>
+        <motion.li
         initial={{opacity: 0, y:10}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, ease:'easeIn',  delay: 0.7}}
-        className={styles.navItems} onClick={() => router.push("/#contact")}>contact.</motion.li>
+        className={styles.navItems} onClick={() => router.push("/#contact")}>contact.
+        </motion.li>
         <ThemeToggle />
         <a className={styles.navItems} download href="/Arun_Kumar.pdf">
           resume

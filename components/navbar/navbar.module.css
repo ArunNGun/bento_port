@@ -57,6 +57,13 @@
 .dot{
   color: var(--accent-color);
 }
+.workLink{
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--sec-text-color);
+  cursor: pointer;
+}
 
 @media (max-width: 773px) {
   .navItems{
