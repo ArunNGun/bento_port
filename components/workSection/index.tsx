@@ -58,19 +58,19 @@ const WorkSection = ({instance="home"}) => {
  
   //motion
      className={styles.viewMore}>
+       <Link href={'/projects'} className={styles.viewMoreText}>
       <motion.div
       initial={{ opacity:0 }}
       whileInView={{ opacity:1 }}
       viewport={{ once: true, amount: 0.1 }}
         transition={{ease: "linear", duration: 1, delay:1   }}
       >
-       <Link href={'/projects'} className={styles.viewMoreText}>
          view more.
-       </Link>
        </motion.div>
-       <a href='#' className={styles.viewMoreLink}>
+       <div className={styles.viewMoreLink}>
          <LinkArrow />
-       </a>
+       </div>
+       </Link>
      </motion.div>
      :
      <div
