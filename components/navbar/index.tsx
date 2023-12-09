@@ -34,13 +34,16 @@ const NavBar = () => {
         initial={{opacity: 0, y:-10}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, ease:'easeIn'}}
-        className={styles.navItems} onClick={() => router.push("/#home")}>home.</motion.li>
+        className={styles.navItems} 
+        onClick={() => router.push("/#home")
+        }>home.</motion.li>
         <motion.li
         initial={{opacity: 0, y:10}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, ease:'easeIn', delay:0.3}}
         className={styles.navItems} 
-        onClick={() => router.push("/#about")}>about.</motion.li>
+        onClick={() => router.push("/#about")}
+        >about.</motion.li>
         <motion.li 
         initial={{opacity: 0, y:-10}}
         animate={{opacity:1, y:0}}
