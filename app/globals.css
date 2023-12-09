@@ -12,6 +12,7 @@
   --box-shadow-color-2: rgba(0, 0, 0, 0.4);
   --box-shadow-color-3: rgba(82, 82, 82, 0.2);
   --box-shadow-color-4: rgba(0, 0, 0, 0.4);
+  --floating-nav: #1313158a
 }
 [data-theme="light"] {
   --bg-color: #ffff;
@@ -26,6 +27,7 @@
   --box-shadow-color-2: rgb(255 255 255 / 0%);
   --box-shadow-color-3: rgb(234 231 231 / 20%);
   --box-shadow-color-4: rgb(134 134 156 / 77%);
+  --floating-nav: #e7e2d887
 }
 body{
   background-color: var(--bg-color);

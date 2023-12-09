@@ -8,18 +8,33 @@ import SkillSection from '@/components/skillSection'
 import WorkSection from '@/components/workSection'
 import Footer from '@/components/footer'
 import ContactSection from '@/components/contactSection'
+import FloatingNav from '@/components/navbar/FloatingNav'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const handleScroll = () => {
+    setIsScrolling(window.scrollY > 10);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <main className={styles.main}>
-      <NavBar />
-      <HeroSection/>
-      <SocialLinks/>
-      <AboutSection/>
-      <SkillSection/>
-      <WorkSection/>
-      <ContactSection/>
-      <Footer/>
-      </main>
-  )
+      {isScrolling ? <FloatingNav isScrolling={isScrolling} /> : <NavBar />}
+      <HeroSection />
+      <SocialLinks />
+      <AboutSection />
+      <SkillSection />
+      <WorkSection />
+      <ContactSection />
+      <Footer />
+    </main>
+  );
 }
