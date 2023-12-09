@@ -22,7 +22,11 @@ const NavBar = () => {
       transition={{ duration: 0.3 }}
       //motion
       className={styles.main}>
-      <motion.div className={styles.logo}><Logo /></motion.div>
+      <motion.div className={styles.logo}>
+        <Link href={'/'}>
+        <Logo />
+        </Link>
+        </motion.div>
       <AnimatePresence>
       <motion.ul 
       className={styles.navItemContainer}>
