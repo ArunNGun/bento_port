@@ -1,8 +1,32 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import styles from './contact.module.css'
 import { motion } from 'framer-motion';
 const ContactSection = () => {
-  
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const submitForm =async (e:any)=>{
+      e.preventDefault();
+      // handleSubmitAnimation();
+      const res = await fetch(`api/contact`, {
+        method: 'POST',
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      // console.log(e)
+      // Temporary
+      if (res.ok) {
+        // alert('Your response has been received!');
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      } else {
+        // alert('There was an error. Please try again in a while.');
+      }
+    };
+
   return (
     <motion.div
     id='contact'
@@ -40,7 +64,7 @@ const ContactSection = () => {
         </div>
         {/* //////////////////// */}
         <form className={styles.form}
-        // onSubmit={submitForm}
+        onSubmit={submitForm}
         >
           <div className={styles.flex}>
             <div>
@@ -49,8 +73,8 @@ const ContactSection = () => {
                 type="text"
                 name="name"
                 id="name"
-                // value={name}
-                // onChange={(e) => setName(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -60,8 +84,8 @@ const ContactSection = () => {
                 type="email"
                 name="email"
                 id="email"
-                // value={email}
-                // onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -83,8 +107,8 @@ const ContactSection = () => {
               name="message"
               id="message"
               rows={5}
-              // value={message}
-              // onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
           </div>
