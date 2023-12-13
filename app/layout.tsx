@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-      <title>'Arun Kumar'</title>
+      <title>Arun Kumar</title>
       <meta
         name="description"
         content="arun kumar is a software engineer building websites and applications you'd love to use"
