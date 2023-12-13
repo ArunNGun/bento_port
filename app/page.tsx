@@ -16,7 +16,7 @@ export default function Home() {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = () => {
-    setIsScrolling(window.scrollY > 10);
+    setIsScrolling(window.scrollY > 100);
   };
 
   useEffect(() => {
@@ -28,7 +28,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {isScrolling ? <FloatingNav isScrolling={isScrolling} /> : <NavBar />}
+      {isScrolling && <FloatingNav isScrolling={isScrolling} />}
+       <NavBar />
       <HeroSection />
       <SocialLinks />
       <AboutSection />

@@ -9,7 +9,7 @@ const Projects = () => {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = () => {
-    setIsScrolling(window.scrollY > 10);
+    setIsScrolling(window.scrollY > 100);
   };
 
   useEffect(() => {
@@ -20,7 +20,8 @@ const Projects = () => {
   }, []);
   return ( 
     <main className={styles.main}>
-      {isScrolling ? <FloatingNav isScrolling={isScrolling} /> : <NavBar />}
+      {isScrolling && <FloatingNav isScrolling={isScrolling} />}
+       <NavBar />
     <WorkSection instance="projects" />
     <Footer/>
     </main>
