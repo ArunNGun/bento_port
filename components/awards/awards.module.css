@@ -1,0 +1,79 @@
+.main{
+  display: flex;
+  width: 100%;
+  /* padding: 48px; */
+  background-color: var(--sec-bg-color);
+  border-radius: 24px;
+  margin: 8px 0px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: -5px -5px 5px var(--box-shadow-color-1),
+    10px 10px 10px var(--box-shadow-color-2), 
+    inset -5px -5px 5px var(--box-shadow-color-3),
+    inset 10px 10px 10px var(--box-shadow-color-4);
+}
+.gallery {
+  height: 724px;
+  /* background: rgb(45, 45, 45); */
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  /* padding: 16px; */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+ .column {
+  position: relative;
+  height: 100%;
+  width: 33.3%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+ .imageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+ .imageContainer img {
+  object-fit: cover;
+}
+
+ .column:nth-of-type(1) {
+  top: -45%;
+}
+
+ .column:nth-of-type(2) {
+  top: -95%;
+}
+
+ .column:nth-of-type(3) {
+  top: -45%;
+}
+
+ .column:nth-of-type(4) {
+  top: -75%;
+}
+
+.spacer {
+  height: 16px;
+}
+.awardHeading{
+  color: var(--accent-color);
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+      z-index: 1;
+    transform: rotateZ(-90deg);
+    left: -80px;
+    top: 100px;
+    backdrop-filter: blur(2px);
+}

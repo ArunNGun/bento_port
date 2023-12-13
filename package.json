@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.13",
+    "@studio-freight/lenis": "^1.0.29",
     "framer-motion": "^10.16.12",
     "next": "14.0.3",
     "react": "^18",

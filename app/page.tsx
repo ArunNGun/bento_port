@@ -10,6 +10,7 @@ import Footer from '@/components/footer'
 import ContactSection from '@/components/contactSection'
 import FloatingNav from '@/components/navbar/FloatingNav'
 import { useEffect, useState } from 'react'
+import Awards from '@/components/awards'
 
 export default function Home() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
       <SocialLinks />
       <AboutSection />
       <SkillSection />
+      <Awards/>
       <WorkSection />
       <ContactSection />
       <Footer />
