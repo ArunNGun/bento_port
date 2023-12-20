@@ -41,7 +41,7 @@ export const GET = async (req:any, res:any) => {
           "tags": [
               "react"
           ],
-          "projectLink": "https://a--k.vercel.app/",
+          "projectLink": "https://ak-code.vercel.app/",
           "id": 1,
           "source_code": "https://github.com/ArunNGun/bento_port",
           "title": "VS-code themed page"
