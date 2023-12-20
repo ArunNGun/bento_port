@@ -1,7 +1,7 @@
 "use client"
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 import styles from './navbar.module.css'
 import { useRouter } from 'next/navigation';
 import Logo from '@/app/Logo';
@@ -9,7 +9,7 @@ import DownloadIcon from './DownloadIcon';
 import ThemeToggle from '../themeToggle';
 
 const FloatingNav = ({isScrolling}:any) => {
-  const router=useRouter()
+  const router = useRouter()
   // console.log(isScrolling)
   const NavAnimations = {
     initial: {

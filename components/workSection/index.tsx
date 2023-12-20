@@ -29,14 +29,14 @@ const WorkSection = ({instance="home"}) => {
     className={styles.main}>
       {
         projectData?.map((project:any)=>(
-          project.id<3 ?
+          project.id<4 ?
           <LargeProjectCard key={project.id} projectLink={project.projectLink} title={project.title} imageSrc={project.imageSrc} quickintro={project.quickIntro} intro={project.intro} />
           :null
         ))
       }
           <div className={styles.smallProjectContainer}>
-        <SmallProjectCard card={1} projectLink={projectData[2].projectLink} title={projectData[2].title} imageSrc={projectData[2].imageSrc} quickintro={projectData[2].quickIntro} intro={projectData[2].intro} />
-        <SmallProjectCard card={2} projectLink={projectData[3].projectLink} title={projectData[3].title} imageSrc={projectData[3].imageSrc} quickintro={projectData[3].quickIntro} intro={projectData[3].intro} />
+        <SmallProjectCard card={1} projectLink={projectData[3].projectLink} title={projectData[3].title} imageSrc={projectData[3].imageSrc} quickintro={projectData[3].quickIntro} intro={projectData[3].intro} />
+        <SmallProjectCard card={2} projectLink={projectData[4].projectLink} title={projectData[4].title} imageSrc={projectData[4].imageSrc} quickintro={projectData[4].quickIntro} intro={projectData[4].intro} />
       </div>
   
         

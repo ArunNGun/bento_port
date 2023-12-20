@@ -5,13 +5,13 @@ import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 import WorkSection from '@/components/workSection';
 import FloatingNav from '@/components/navbar/FloatingNav';
+
 const Projects = () => {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = () => {
     setIsScrolling(window.scrollY > 100);
   };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
