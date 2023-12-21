@@ -61,7 +61,7 @@ const NavBar = () => {
         </motion.li>
         <ThemeToggle />
         <a className={styles.navItems} 
-         href="/Arun_Kumar.pdf" download>
+         href="/Arun_kumar.pdf" download>
           resume
           <DownloadIcon />
         </a>
