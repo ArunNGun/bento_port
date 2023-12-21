@@ -60,7 +60,11 @@ const NavBar = () => {
         className={styles.navItems} onClick={() => router.push("/#contact")}>contact.
         </motion.li>
         <ThemeToggle />
-        <a className={styles.navItems} download href="/Arun_Kumar.pdf">
+        <a className={styles.navItems} 
+        target="_blank"
+        rel="noopener noreferrer"
+        download 
+        href="/Arun_Kumar.pdf">
           resume
           <DownloadIcon />
         </a>
