@@ -61,13 +61,7 @@ const NavBar = () => {
         </motion.li>
         <ThemeToggle />
         <a className={styles.navItems} 
-        target="_blank"
-        rel="noopener noreferrer"
-        download 
-        // @ts-nocheck
-        // @ts-ignore
-        locale={false}
-        href={'public/Arun_Kumar.pdf'}>
+         href="/Arun_Kumar.pdf" download>
           resume
           <DownloadIcon />
         </a>
