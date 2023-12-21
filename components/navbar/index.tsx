@@ -64,7 +64,10 @@ const NavBar = () => {
         target="_blank"
         rel="noopener noreferrer"
         download 
-        href="/Arun_Kumar.pdf">
+        // @ts-nocheck
+        // @ts-ignore
+        locale={false}
+        href={'public/Arun_Kumar.pdf'}>
           resume
           <DownloadIcon />
         </a>
