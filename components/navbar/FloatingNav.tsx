@@ -87,8 +87,9 @@ const FloatingNav = ({isScrolling}:any) => {
         <ThemeToggle />
         </motion.li>
 
-        <a className={styles.floatingnavItems} download href="/Arun_Kumar.pdf">
-          resume
+        <a className={styles.floatingnavItems} download
+         href="/Arun_kumar.pdf"
+         >  resume
           <DownloadIcon />
         </a>
       </motion.ul>
