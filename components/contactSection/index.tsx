@@ -44,7 +44,7 @@ const ContactSection = () => {
         </div>
         <ul className={styles.socialList}>
           <li>website:<a href='https://a-k-ivory.vercel.app/' target='_blank' className={styles.socialLinks}> a-k-ivory.vercel.app</a></li>
-          <li>email: <a href='' target='_blank' className={styles.socialLinks}>thechaudharyarun@gmail.com</a></li>
+          <li>email: <a href='' target='_blank' className={styles.socialLinks}>chaudharyarun5797@gmail.com</a></li>
           <li>github: <a href='https://github.com/ArunNGun' target='_blank' className={styles.socialLinks}>arunNgun</a></li>
           <li>linkedin: <a href='https://www.linkedin.com/in/akumar97/' target='_blank' className={styles.socialLinks}>akumar97</a></li>
           <li>instagram: <a href='https://instagram.com/arun_irl' target='_blank' className={styles.socialLinks}>arun_irl</a></li>
